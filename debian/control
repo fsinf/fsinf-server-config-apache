@@ -10,7 +10,7 @@ Vcs-Git: https://github.com/fsinf/fsinf-server-config-apache.git
 
 Package: fsinf-server-config-apache-macros
 Architecture: all
-Depends: fsinf-server-config-apache
+Depends: fsinf-server-config-apache, ${misc:Depends}
 Description: transitional dummy package
  This is a transitional dummy package. It can safely be removed.
 
