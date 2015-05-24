@@ -1,0 +1,25 @@
+Source: fsinf-server-config-apache
+Section: misc
+Priority: optional
+Maintainer: Mathias Ertl <mati@fsinf.at>
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9)
+Homepage: https://github.com/fsinf/fsinf-server-config-apache
+Vcs-Browser: https://github.com/fsinf/fsinf-server-config-apache
+Vcs-Git: https://github.com/fsinf/fsinf-server-config-apache.git
+
+Package: fsinf-server-config-apache-macros
+Architecture: all
+Depends: fsinf-server-config-apache
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
+
+Package: fsinf-server-config-apache
+Architecture: all
+Depends: fsinf-server-config-startssl (>= 2013-08-24), libapache2-mod-macro, ${misc:Depends},
+# for munin status
+ liblwp-useragent-determined-perl
+Replaces: fsinf-server-config-apache-macros
+Breaks: fsinf-server-config-apache-macros
+Description: Common Apache configuration
+ This package provides common Apache configuration used by all our servers.

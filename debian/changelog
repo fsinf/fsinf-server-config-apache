@@ -1,0 +1,5 @@
+fsinf-server-config-apache (1:2015.05.24.1) unstable; urgency=low
+
+  * First version outside of the fsinf-server-config package.
+  
+ -- Mathias Ertl <mati@fsinf.at>  Sun, 24 May 2015 17:15:49 +0200
