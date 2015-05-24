@@ -5,4 +5,6 @@
     SSLCertificateKeyFile /etc/ssl/private/$hostname.key
     SSLCertificateChainFile /etc/ssl/certs/StartCom_Certification_Authority_$class.pem
     SSLCACertificateFile /etc/ssl/certs/StartCom_Certification_Authority.pem
+
+    Use ssl-hpkp-startssl-$class
 </Macro>

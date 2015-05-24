@@ -4,4 +4,8 @@
     SSLCertificateFile /etc/ssl/public/$hostname.pem
     SSLCertificateKeyFile /etc/ssl/private/$hostname.key
     SSLCACertificateFile /etc/ssl/certs/fsinf_at.pem
+
+    Header set Public-Key-Pins 'max-age=2592000; includeSubDomains;
+        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw=";
+        pin-sha256="Epo43OYWt0vZHtsUDhKvgnJPJzgUzsfzpMPZEFN1Peo="'
 </Macro>
