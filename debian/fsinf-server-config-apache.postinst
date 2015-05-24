@@ -15,8 +15,8 @@ case "$1" in
             apache2_invoke enmod ssl
             apache2_invoke enmod rewrite
             apache2_invoke disconf fsinf-server-config-apache-macros.conf
+            apache2_invoke disconf fsinf-server-config.conf
             apache2_invoke enconf fsinf-server-config-apache.conf
-            apache2_invoke enconf fsinf-server-config.conf
         fi
         ;;
     *) 
