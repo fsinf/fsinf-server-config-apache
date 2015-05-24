@@ -1,0 +1,21 @@
+<Macro ssl $hostname $class>
+    SSLEngine on
+
+    SSLCertificateFile /etc/ssl/public/$hostname.pem
+    SSLCertificateKeyFile /etc/ssl/private/$hostname.key
+    SSLCertificateChainFile /etc/ssl/certs/StartCom_Certification_Authority_$class.pem
+    SSLCACertificateFile /etc/ssl/certs/StartCom_Certification_Authority.pem
+
+    # SSL hardening
+    SSLProtocol all -SSLv2 -SSLv3
+    SSLHonorCipherOrder On
+    SSLCompression off
+    SSLCipherSuite 'DH:ECDH:!AES128:!CAMELLIA128:!3DES:!MD5:!RC4:!aNULL:!NULL:!EXPORT:!LOW:!MEDIUM'
+    SSLUseStapling on
+
+    SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown
+    Header set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+    Header set Public-Key-Pins "max-age=2592000, includeSubDomains;
+        pin-sha256=\"b0635597f3be147cd5e686fb87f7db65c8931a50bc659971cae61d70f9f58f5b\";
+        pin-sha256=\"MhNuBcxCRMx1Hfe5MjvCngOW6oCtrB5Hqp2RHbX+Wy0=\";"
+</Macro>
