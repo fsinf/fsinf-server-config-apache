@@ -2,10 +2,6 @@
 
 set -e
 
-#DEBHELPER#
-
-CERTDIR=/etc/ssl/public/
-
 case "$1" in
     configure|reconfigure)
         if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
@@ -19,10 +15,12 @@ case "$1" in
             apache2_invoke enconf fsinf-server-config-apache.conf
 
             # remove old configuration
-            rm -f fsinf-server-config-apache-macros.conf
-            rm -f fsinf-server-config.conf
+            rm -f /etc/apache2/conf-available/fsinf-server-config-apache-macros.conf
+            rm -f /etc/apache2/conf-available/fsinf-server-config.conf
         fi
         ;;
     *) 
         ;;
 esac
+
+#DEBHELPER#
