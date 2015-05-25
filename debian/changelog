@@ -2,6 +2,7 @@ fsinf-server-config-apache (1:2015.05.25.2) unstable; urgency=low
 
   * Add documentation on how to get HPKP hashes to the ssl-fsinf macro.
   * Macros now consistently use four spaces instead of tabs.
+  * Add .gitignore file to ignore vim swap-files.
   
  -- Mathias Ertl <mati@fsinf.at>  Mon, 25 May 2015 13:02:46 +0200
 
