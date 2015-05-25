@@ -1,4 +1,4 @@
-fsinf-server-config-apache (1:2015.05.25.3) unstable; urgency=low
+fsinf-server-config-apache (1:2015.05.25.4) unstable; urgency=low
 
   * Correctly continue lines for HPKP headers.
   * Optimize order in postinst.
