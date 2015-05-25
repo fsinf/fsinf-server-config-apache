@@ -1,6 +1,7 @@
 fsinf-server-config-apache (1:2015.05.25.3) unstable; urgency=low
 
   * Correctly continue lines for HPKP headers.
+  * Optimize order in postinst.
   
  -- Mathias Ertl <mati@fsinf.at>  Mon, 25 May 2015 13:22:12 +0200
 

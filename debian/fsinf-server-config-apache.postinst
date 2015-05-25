@@ -4,23 +4,6 @@ set -e
 
 case "$1" in
     configure|reconfigure)
-        if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
-            . /usr/share/apache2/apache2-maintscript-helper
-            apache2_invoke enmod macro
-            apache2_invoke enmod headers
-            apache2_invoke enmod ssl
-            apache2_invoke enmod rewrite
-            apache2_invoke disconf fsinf-server-config-apache-macros.conf
-            apache2_invoke disconf fsinf-server-config.conf
-            apache2_invoke enconf fsinf-server-config-apache.conf
-
-            # remove old configuration
-            rm -f /etc/apache2/conf-available/fsinf-server-config-apache-macros.conf
-            rm -f /etc/apache2/conf-available/fsinf-server-config.conf
-            rm -f /etc/apache2/conf-enabled/fsinf-server-config-apache-macros.conf
-            rm -f /etc/apache2/conf-enabled/fsinf-server-config.conf
-        fi
-
         # Enable macro dependencies
         if [ -e "/etc/apache2/macros-enabled/ssl" -a ! -e "/etc/apache2/macros-enabled/ssl-hpkp-startssl-class1" ]; then
             ln -s /etc/apache2/macros-available/ssl-hpkp-startssl-class1 /etc/apache2/macros-enabled/ssl-hpkp-startssl-class1
@@ -34,6 +17,23 @@ case "$1" in
         if [ -e "/etc/apache2/macros-enabled/ssl-fsinf" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
             ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
         fi
+
+        # do not restart webserver
+        if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
+            . /usr/share/apache2/apache2-maintscript-helper
+            apache2_invoke enmod macro
+            apache2_invoke enmod headers
+            apache2_invoke enmod ssl
+            apache2_invoke enmod rewrite
+            apache2_invoke enconf fsinf-server-config-apache.conf
+
+            # remove old configuration
+            rm -f /etc/apache2/conf-available/fsinf-server-config-apache-macros.conf
+            rm -f /etc/apache2/conf-available/fsinf-server-config.conf
+            rm -f /etc/apache2/conf-enabled/fsinf-server-config-apache-macros.conf
+            rm -f /etc/apache2/conf-enabled/fsinf-server-config.conf
+        fi
+
         ;;
     *) 
         ;;
