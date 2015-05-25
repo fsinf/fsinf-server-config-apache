@@ -8,7 +8,7 @@
     # Get the correct hash with:
     #     openssl x509 -pubkey -noout -in <cert> | grep -v PUBLIC | base64 -d \
     #         | openssl dgst -sha256 -binary | base64
-    Header set Public-Key-Pins 'max-age=2592000; includeSubDomains;
-        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw=";
+    Header set Public-Key-Pins 'max-age=2592000; includeSubDomains; \
+        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="; \
         pin-sha256="Epo43OYWt0vZHtsUDhKvgnJPJzgUzsfzpMPZEFN1Peo="'
 </Macro>

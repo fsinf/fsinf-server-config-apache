@@ -1,5 +1,11 @@
 fsinf-server-config-apache (1:2015.05.25.3) unstable; urgency=low
 
+  * Correctly continue lines for HPKP headers.
+  
+ -- Mathias Ertl <mati@fsinf.at>  Mon, 25 May 2015 13:22:12 +0200
+
+fsinf-server-config-apache (1:2015.05.25.3) unstable; urgency=low
+
   * Fix HPKP macros for StartSSL.
   * Also remove enabled config, just to be sure.
   
