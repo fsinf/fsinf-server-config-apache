@@ -18,6 +18,20 @@ case "$1" in
             rm -f /etc/apache2/conf-available/fsinf-server-config-apache-macros.conf
             rm -f /etc/apache2/conf-available/fsinf-server-config.conf
         fi
+
+        # Enable macro dependencies
+        if [ -e "/etc/apache2/macros-enabled/ssl" -a ! -e "/etc/apache2/macros-enabled/ssl-hpkp-startssl-class1" ]; then
+            ln -s /etc/apache2/macros-available/ssl-hpkp-startssl-class1 /etc/apache2/macros-enabled/ssl-hpkp-startssl-class1
+        fi
+        if [ -e "/etc/apache2/macros-enabled/ssl" -a ! -e "/etc/apache2/macros-enabled/ssl-hpkp-startssl-class2" ]; then
+            ln -s /etc/apache2/macros-available/ssl-hpkp-startssl-class2 /etc/apache2/macros-enabled/ssl-hpkp-startssl-class2
+        fi
+        if [ -e "/etc/apache2/macros-enabled/ssl" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
+            ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
+        fi
+        if [ -e "/etc/apache2/macros-enabled/ssl-fsinf" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
+            ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
+        fi
         ;;
     *) 
         ;;

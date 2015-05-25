@@ -3,6 +3,8 @@ fsinf-server-config-apache (1:2015.05.24.1) unstable; urgency=low
   * First version outside of the fsinf-server-config package.
   * Add the ssl-common macro for shared SSL configuration between setups using
     StartSSL or FSINF CA certificates (or other CAs in the future).
+  * Macro dependencies in the ssl and ssl-fsinf macros are now automatically
+    enabled in postinst.
   * Now use a single configuration file in /etc/apache2/conf-available. Old
     files are removed by postinst.
   * SSL configuration now includes HTTP Public Key Pinning headers.
