@@ -17,6 +17,10 @@ case "$1" in
             apache2_invoke disconf fsinf-server-config-apache-macros.conf
             apache2_invoke disconf fsinf-server-config.conf
             apache2_invoke enconf fsinf-server-config-apache.conf
+
+            # remove old configuration
+            rm -f fsinf-server-config-apache-macros.conf
+            rm -f fsinf-server-config.conf
         fi
         ;;
     *) 
