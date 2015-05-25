@@ -1,3 +1,9 @@
+fsinf-server-config-apache (1:2015.05.25.2) unstable; urgency=low
+
+  * Add documentation on how to get HPKP hashes to the ssl-fsinf macro.
+  
+ -- Mathias Ertl <mati@fsinf.at>  Mon, 25 May 2015 13:02:46 +0200
+
 fsinf-server-config-apache (1:2015.05.25.1) unstable; urgency=low
 
   * First version outside of the fsinf-server-config package.
