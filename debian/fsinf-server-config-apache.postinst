@@ -17,6 +17,8 @@ case "$1" in
             # remove old configuration
             rm -f /etc/apache2/conf-available/fsinf-server-config-apache-macros.conf
             rm -f /etc/apache2/conf-available/fsinf-server-config.conf
+            rm -f /etc/apache2/conf-enabled/fsinf-server-config-apache-macros.conf
+            rm -f /etc/apache2/conf-enabled/fsinf-server-config.conf
         fi
 
         # Enable macro dependencies
