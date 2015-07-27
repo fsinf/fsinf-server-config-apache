@@ -5,6 +5,7 @@ fsinf-server-config-apache (1:2015.07.27.1) unstable; urgency=low
   * Use IncludeOptional to include macros, this way update does not fail if no
     macros are enabled.
   * Disable correct configuration file in postrm.
+  * Remove fsinf-server-config-apache-macros package.
 
  -- Mathias Ertl <mati@fsinf.at>  Mon, 27 Jul 2015 21:44:22 +0200
 
