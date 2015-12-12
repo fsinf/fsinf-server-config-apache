@@ -1,5 +1,6 @@
 <Macro ssl-hpkp-startssl-class2>
     Header set Public-Key-Pins 'max-age=2592000; \
         pin-sha256="nwDSX8WPqNCwewH20Ii61odFmXsG26cfVtvaZtJMdQw="; \
+        pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; \
         pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="'
 </Macro>
