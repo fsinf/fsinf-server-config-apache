@@ -1,6 +1,8 @@
 fsinf-server-config-apache (1:2015.12.112.1) unstable; urgency=low
 
   * Add the ssl-letsencrypt and ssl-hpkp-letsencrypt apache macros.
+  * HPKP macros no longer include the "includeSubDomains" directive, because
+    then individual subdomains can use different CAs.
 
  -- Mathias Ertl <mati@fsinf.at>  Sat, 12 Dec 2015 16:50:51 +0100
 
