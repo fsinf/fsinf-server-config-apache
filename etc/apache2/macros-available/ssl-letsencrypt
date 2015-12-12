@@ -1,0 +1,8 @@
+<Macro ssl-letsencrypt $hostname>
+    Use ssl-common
+
+    SSLCertificateFile /etc/letsencrypt/live/$hostname/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/$hostname/privkey.pem
+
+    Use ssl-hpkp-letsencrypt
+</Macro>
