@@ -1,7 +1,12 @@
+fsinf-server-config-apache (1:2015.12.112.1) unstable; urgency=low
+
+  * Add the ssl-hpkp-letsencrypt apache macro.
+
+ -- Mathias Ertl <mati@fsinf.at>  Sat, 12 Dec 2015 16:50:51 +0100
+
 fsinf-server-config-apache (1:2015.08.10.1) unstable; urgency=low
 
   * Reduce the effect of intermittent OCSP responder errors.
-
 
  -- Mathias Ertl <mati@fsinf.at>  Mon, 10 Aug 2015 18:53:14 +0200
 
