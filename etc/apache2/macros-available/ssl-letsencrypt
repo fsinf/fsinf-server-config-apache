@@ -4,5 +4,7 @@
     SSLCertificateFile /etc/letsencrypt/live/$hostname/fullchain.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/$hostname/privkey.pem
 
-    Use ssl-hpkp-letsencrypt
+    Header set Public-Key-Pins 'max-age=2592000; \
+        pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; \
+        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="'
 </Macro>
