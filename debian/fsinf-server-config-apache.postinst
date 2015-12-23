@@ -17,6 +17,9 @@ case "$1" in
         if [ -e "/etc/apache2/macros-enabled/ssl-fsinf" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
             ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
         fi
+        if [ -e "/etc/apache2/macros-enabled/ssl-letsencrypt" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
+            ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
+        fi
 
         # enable necessary modules and configuration
         if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then

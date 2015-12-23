@@ -2,6 +2,7 @@ fsinf-server-config-apache (1:2015.13.23.1) unstable; urgency=low
 
   * This version carries a fake month due to the earlier month-mishap.
   * Remove ssl-hpkp-letsencrypt macro, it's now included in ssl-letsencrypt.
+  * Enable ssl-common macro if ssl-letsencrypt macro is enabled.
 
  -- Mathias Ertl <mati@fsinf.at>  Sat, 12 Dec 2015 16:50:51 +0100
 
