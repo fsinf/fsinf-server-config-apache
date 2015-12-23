@@ -6,5 +6,6 @@
 
     Header set Public-Key-Pins 'max-age=2592000; \
         pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; \
-        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="'
+        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="; \
+        pin-sha256="kb6xLprt35abNnSn74my4Dkfya9arbk5zN5a60YzuqE="'
 </Macro>
