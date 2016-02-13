@@ -1,3 +1,9 @@
+fsinf-server-config-apache (1:2016.02.13.1) unstable; urgency=low
+
+  * Add X-Frame-Options and X-XSS-Protection headers to the basic macro.
+
+ -- Mathias Ertl <mati@fsinf.at>  Sat, 13 Feb 2016 14:12:33 +0100
+
 fsinf-server-config-apache (1:2015.13.23.1) unstable; urgency=low
 
   * This version carries a fake month due to the earlier month-mishap.
