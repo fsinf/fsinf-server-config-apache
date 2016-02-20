@@ -2,6 +2,8 @@ fsinf-server-config-apache (1:2016.02.20.1) unstable; urgency=low
 
   * Remove old Internet Explorer keep-alive hacks. This only affects version 5
     and earlier, our TLS setup rules out even version 6 completely.
+  * Add the "preload" token to HSTS headers so we can try to add our sites to
+    chromes HSTS preload lists.
 
  -- Mathias Ertl <mati@fsinf.at>  Sat, 20 Feb 2016 10:48:41 +0100
 
