@@ -9,7 +9,4 @@
 
     # HTTP Strict Transport Security
     Header set Strict-Transport-Security "max-age=16070400; includeSubDomains"
-
-    # Some IE fixes!?
-    SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown
 </Macro>
