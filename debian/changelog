@@ -1,4 +1,4 @@
-fsinf-server-config-apache (1:2016.02.26.1) unstable; urgency=low
+fsinf-server-config-apache (1:2016.02.26.2) unstable; urgency=low
 
   * Fix ssl-hpkp-startssl-class2-iv macro. 
 
