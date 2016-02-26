@@ -1,3 +1,10 @@
+fsinf-server-config-apache (1:2016.02.26.1) unstable; urgency=low
+
+  * Add ssl-hpkp-startssl-class2_iv macro for new StartSSL intermediary
+    certificates.
+
+ -- Mathias Ertl <mati@fsinf.at>  Fri, 26 Feb 2016 11:31:04 +0100
+
 fsinf-server-config-apache (1:2016.02.20.1) unstable; urgency=low
 
   * Remove old Internet Explorer keep-alive hacks. This only affects version 5
