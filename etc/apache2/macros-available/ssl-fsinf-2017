@@ -3,12 +3,11 @@
 
     SSLCertificateFile /etc/ssl/public/$hostname.pem
     SSLCertificateKeyFile /etc/ssl/private/$hostname.key
-    SSLCACertificateFile /etc/ssl/certs/fsinf_at.pem
+    SSLCACertificateFile /etc/ssl/certs/fsinf_at_2017.pem
 
     # Get the correct hash with:
     #     openssl x509 -pubkey -noout -in <cert> | grep -v PUBLIC | base64 -d \
     #         | openssl dgst -sha256 -binary | base64
     Header set Public-Key-Pins 'max-age=2592000; includeSubDomains; \
-        pin-sha256="rkpHgGq5EUiSbCunHRqqWRirU3te8v6qMGWObWw+SlI="; \
-        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="'
+        pin-sha256="rkpHgGq5EUiSbCunHRqqWRirU3te8v6qMGWObWw+SlI="'
 </Macro>
