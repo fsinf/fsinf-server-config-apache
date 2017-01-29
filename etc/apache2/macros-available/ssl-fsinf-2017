@@ -1,4 +1,4 @@
-<Macro ssl-fsinf $hostname>
+<Macro ssl-fsinf-2017 $hostname>
     Use ssl-common
 
     SSLCertificateFile /etc/ssl/public/$hostname.pem
