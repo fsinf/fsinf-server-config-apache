@@ -14,6 +14,9 @@
     # No MIME-sniffing content
     Header always set X-Content-Type-Options "nosniff"
 
+    # Do not send referer to other sites
+    Header always set Referrer-Policy "strict-origin"
+
     <Directory />
         AllowOverride None
     </Directory>
