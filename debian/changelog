@@ -1,6 +1,7 @@
 fsinf-server-config-apache (1:2017.04.05.1) unstable; urgency=low
 
   * Add the Referrer-Policy header.
+  * Update HPKP pins to use new FSINF CA.
 
  -- Mathias Ertl <mati@fsinf.at>  Sun, 29 Jan 2017 17:05:48 +0100
 
