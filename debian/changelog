@@ -1,10 +1,10 @@
-fsinf-server-config-apache (1:2017.04.05.1) unstable; urgency=low
+fsinf-server-config-apache (1:2017.04.30.1) unstable; urgency=low
 
   * Remove the "always" quantifier when setting headers. With the quantifier,
     the header is actually appended if the returned response already contains
     the header.
 
- -- Mathias Ertl <mati@fsinf.at>  Wed, 05 Apr 2017 15:48:33 +0200
+ -- Mathias Ertl <mati@fsinf.at>  Sun, 30 Apr 2017 11:36:52 +0200
 
 fsinf-server-config-apache (1:2017.04.05.1) unstable; urgency=low
 
