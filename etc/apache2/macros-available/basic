@@ -6,16 +6,16 @@
     DocumentRoot /var/www/$hostname
 
     # Don't allow this site to be in an iframe
-    Header always set X-Frame-Options "deny"
+    Header set X-Frame-Options "deny"
 
     # Force filter for some cross-site scripting attacks
-    Header always set X-XSS-Protection "1; mode=block"
+    Header set X-XSS-Protection "1; mode=block"
 
     # No MIME-sniffing content
-    Header always set X-Content-Type-Options "nosniff"
+    Header set X-Content-Type-Options "nosniff"
 
     # Do not send referer to other sites
-    Header always set Referrer-Policy "strict-origin"
+    Header set Referrer-Policy "strict-origin"
 
     <Directory />
         AllowOverride None
