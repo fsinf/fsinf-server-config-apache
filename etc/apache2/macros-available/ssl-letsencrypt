@@ -4,7 +4,11 @@
     SSLCertificateFile /etc/letsencrypt/live/$hostname/fullchain.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/$hostname/privkey.pem
 
+    # YLh1 - Lets Encrypt
+    # 6DCt - FSINF 2017 (server)
+    # t9vC - FSINF 2015
     Header set Public-Key-Pins 'max-age=2592000; \
         pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; \
-        pin-sha256="D2Egikw2PD5llf0oD2kCOcbq+0z/ogprYjBa3U7YhuA="'
+        pin-sha256="6DCt5RV1DeTIx6wr03K21FQmh4Oq0Yr7L0I4dRsQTio="; \
+        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="'
 </Macro>
