@@ -29,6 +29,14 @@ case "$1" in
             echo '###              grep -Ri "use ssl " /etc/apache2/sites-enabled/ ###'
             echo '####################################################################'
         fi
+        if [ $(grep -Ri 'use ssl-fsinf ' /etc/apache2/sites-enabled/ | wc -l) != 0 ]; then
+            echo '##########################################################################'
+            echo '### WARNING: Found FSINF (2015) macro in /etc/apache2/sites-enabled!   ###'
+            echo '###          Replace cert with new CA as soon as possible.             ###'
+            echo '###          Find offenders with:                                      ###'
+            echo '###              grep -Ri "use ssl-fsinf " /etc/apache2/sites-enabled/ ###'
+            echo '##########################################################################'
+        fi
 
         # enable necessary modules and configuration
         if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
