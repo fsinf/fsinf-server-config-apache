@@ -1,3 +1,10 @@
+fsinf-server-config-apache (1:2017.07.09.1) unstable; urgency=low
+
+  * Remove dependency on fsinf-server-config-startssl package, as StartSSL is
+    no longer a trusted CA and hasn't been in use for a long time.
+
+ -- Mathias Ertl <mati@fsinf.at>  Sun, 09 Jul 2017 11:06:49 +0200
+
 fsinf-server-config-apache (1:2017.04.30.1) unstable; urgency=low
 
   * Remove the "always" quantifier when setting headers. With the quantifier,
