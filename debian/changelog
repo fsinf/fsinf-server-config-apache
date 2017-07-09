@@ -2,6 +2,8 @@ fsinf-server-config-apache (1:2017.07.09.1) unstable; urgency=low
 
   * Remove dependency on fsinf-server-config-startssl package, as StartSSL is
     no longer a trusted CA and hasn't been in use for a long time.
+  * Remove "ssl" macro, provided StartSSL macros.
+  * Remove "ssl-fsinf" macro, provided deorecated FSINF CA.
   * Update HPKP pins of ssl-fsinf and ssl-fsinf-2017 macro to use the pins for
     the latest incarnation of the FSINF 2017 CA.
 
