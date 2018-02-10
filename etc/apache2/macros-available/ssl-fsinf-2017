@@ -10,9 +10,7 @@
     #         | openssl dgst -sha256 -binary | base64
     # 1. is FSINF 2017 (server)
     # 2. is FSINF 2017
-    # 3. is FSINF 2015 (will be rmeoved later)
     Header set Public-Key-Pins 'max-age=2592000; includeSubDomains; \
         pin-sha256="6DCt5RV1DeTIx6wr03K21FQmh4Oq0Yr7L0I4dRsQTio="; \
-        pin-sha256="FVyIjReKzfZ5lM2Lw2X0WQbvkJUQLDVPL1Eeqc+r5ok="; \
-        pin-sha256="t9vCPnG/aCBHpQGgVY++aOfJuDEmGJsGjNoC0wCfaZw="'
+        pin-sha256="FVyIjReKzfZ5lM2Lw2X0WQbvkJUQLDVPL1Eeqc+r5ok="'
 </Macro>

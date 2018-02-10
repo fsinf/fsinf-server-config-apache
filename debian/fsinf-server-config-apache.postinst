@@ -5,37 +5,11 @@ set -e
 case "$1" in
     configure|reconfigure)
         # Enable macro dependencies
-        if [ -e "/etc/apache2/macros-enabled/ssl" -a ! -e "/etc/apache2/macros-enabled/ssl-hpkp-startssl-class1" ]; then
-            ln -s /etc/apache2/macros-available/ssl-hpkp-startssl-class1 /etc/apache2/macros-enabled/ssl-hpkp-startssl-class1
-        fi
-        if [ -e "/etc/apache2/macros-enabled/ssl" -a ! -e "/etc/apache2/macros-enabled/ssl-hpkp-startssl-class2" ]; then
-            ln -s /etc/apache2/macros-available/ssl-hpkp-startssl-class2 /etc/apache2/macros-enabled/ssl-hpkp-startssl-class2
-        fi
-        if [ -e "/etc/apache2/macros-enabled/ssl" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
-            ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
-        fi
-        if [ -e "/etc/apache2/macros-enabled/ssl-fsinf" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
+        if [ -e "/etc/apache2/macros-enabled/ssl-fsinf-2017" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
             ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
         fi
         if [ -e "/etc/apache2/macros-enabled/ssl-letsencrypt" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
             ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
-        fi
-
-        if [ $(grep -Ri 'use ssl ' /etc/apache2/sites-enabled/ | wc -l) != 0 ]; then
-            echo '####################################################################'
-            echo '### WARNING: Found StartSSL macro in /etc/apache2/sites-enabled! ###'
-            echo '###          Replace cert with Lets Encrypt as soon as possible. ###'
-            echo '###          Find offenders with:                                ###'
-            echo '###              grep -Ri "use ssl " /etc/apache2/sites-enabled/ ###'
-            echo '####################################################################'
-        fi
-        if [ $(grep -Ri 'use ssl-fsinf ' /etc/apache2/sites-enabled/ | wc -l) != 0 ]; then
-            echo '##########################################################################'
-            echo '### WARNING: Found FSINF (2015) macro in /etc/apache2/sites-enabled!   ###'
-            echo '###          Replace cert with new CA as soon as possible.             ###'
-            echo '###          Find offenders with:                                      ###'
-            echo '###              grep -Ri "use ssl-fsinf " /etc/apache2/sites-enabled/ ###'
-            echo '##########################################################################'
         fi
 
         # enable necessary modules and configuration
