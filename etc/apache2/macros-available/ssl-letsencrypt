@@ -1,6 +1,10 @@
 <Macro ssl-letsencrypt $hostname>
     Use ssl-common
 
+    # Do not rewrite ACME (Let's Encrypt) challenges
+    RewriteEngine On
+    RewriteRule /.well-known/acme-challenge/ - [L]
+
     SSLCertificateFile /etc/letsencrypt/live/$hostname/fullchain.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/$hostname/privkey.pem
 
