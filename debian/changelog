@@ -3,6 +3,7 @@ fsinf-server-config-apache (1:2018.02.10.1) unstable; urgency=low
   * Remove FSINF 2015 CA from HPKP lists.
   * Remove FSINF 2015 macro ("ssl-fsinf").
   * Remove traces from old macros in postinst.
+  * Add Expect-CT header to ssl-letsencrypt macro
 
  -- Mathias Ertl <mati@fsinf.at>  Sat, 10 Feb 2018 12:17:22 +0100
 

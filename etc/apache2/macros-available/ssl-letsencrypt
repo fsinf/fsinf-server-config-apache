@@ -9,4 +9,8 @@
     Header set Public-Key-Pins 'max-age=2592000; \
         pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; \
         pin-sha256="6DCt5RV1DeTIx6wr03K21FQmh4Oq0Yr7L0I4dRsQTio="'
+
+    # Expect Certificate Transparency: 
+    #   https://scotthelme.co.uk/a-new-security-header-expect-ct/
+    Header set Expect-CT "enforce, max-age=86400"
 </Macro>
