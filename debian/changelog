@@ -1,6 +1,7 @@
 fsinf-server-config-apache (1:2018.03.24.1) unstable; urgency=low
 
   * Disable TLSv1.0 and TLSv1.2.
+  * Update Standards-Version to 4.1.3 (no changes needed).
 
  -- Mathias Ertl <mati@fsinf.at>  Sat, 24 Mar 2018 11:13:05 +0100
 

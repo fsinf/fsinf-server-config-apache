@@ -2,7 +2,7 @@ Source: fsinf-server-config-apache
 Section: misc
 Priority: optional
 Maintainer: Mathias Ertl <mati@fsinf.at>
-Standards-Version: 3.9.6
+Standards-Version: 4.1.3
 Build-Depends: debhelper (>= 9)
 Homepage: https://github.com/fsinf/fsinf-server-config-apache
 Vcs-Browser: https://github.com/fsinf/fsinf-server-config-apache
