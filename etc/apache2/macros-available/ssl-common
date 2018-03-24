@@ -2,7 +2,7 @@
     SSLEngine on
 
     # SSL hardening
-    SSLProtocol all -SSLv2 -SSLv3
+    SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
     SSLCompression off
     SSLCipherSuite 'ECDH:DH:!CAMELLIA128:!3DES:!MD5:!RC4:!aNULL:!NULL:!EXPORT:!LOW:!MEDIUM'
     SSLUseStapling on
