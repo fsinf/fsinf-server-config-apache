@@ -2,14 +2,27 @@
 
 set -e
 
+DHPARAM=/etc/ssl/dhparam.pem
+
 case "$1" in
     configure|reconfigure)
         # Enable macro dependencies
         if [ -e "/etc/apache2/macros-enabled/ssl-fsinf-2017" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
             ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
         fi
+        if [ -e "/etc/apache2/macros-enabled/ssl-fsinf-2019" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
+            ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
+        fi
         if [ -e "/etc/apache2/macros-enabled/ssl-letsencrypt" -a ! -e "/etc/apache2/macros-enabled/ssl-common" ]; then
             ln -s /etc/apache2/macros-available/ssl-common /etc/apache2/macros-enabled/ssl-common
+        fi
+
+        if [ ! -e "$DHPARAM" ]; then
+            echo "# WARNING: $DHPARAM does not exist. Create with:"
+            echo "#"
+            echo "#     openssl dhparam -out $DHPARAM 4096"
+            echo "#"
+            echo "# ... and restart apache (Note: Generation takes ~10 minutes)."
         fi
 
         # enable necessary modules and configuration

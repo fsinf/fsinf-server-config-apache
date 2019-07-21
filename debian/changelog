@@ -3,6 +3,7 @@ fsinf-server-config-apache (1:2019.07.21.1) unstable; urgency=low
   * Update Standards-Version to 4.3.0 (no changes needed)
   * Increase compat level to 12
   * Remove Replaces/Breaks for old package names
+  * Warn in postinst if /etc/ssl/dhparam.pem does not exist
   * Fix changelog entry from 1:2018.03.24.1: We really disabled
     TLSv1.1, not TLSv1.2.
 
