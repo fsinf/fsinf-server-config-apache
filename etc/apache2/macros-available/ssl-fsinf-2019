@@ -1,0 +1,15 @@
+<Macro ssl-fsinf-2019 $hostname>
+    Use ssl-common
+
+    SSLCertificateFile /etc/ssl/public/$hostname.pem
+    SSLCertificateKeyFile /etc/ssl/private/$hostname-chain.key
+
+    # Get the correct hash with:
+    #     openssl x509 -pubkey -noout -in <cert> | grep -v PUBLIC | base64 -d \
+    #         | openssl dgst -sha256 -binary | base64
+    # 1. is FSINF 2019 (server)
+    # 2. is FSINF 2017
+    Header set Public-Key-Pins 'max-age=2592000; includeSubDomains; \
+        pin-sha256="YOeZwYHSOXlVtOJI8cGOV8dG3oprutAY+ywT/8hymtM="; \
+        pin-sha256="FVyIjReKzfZ5lM2Lw2X0WQbvkJUQLDVPL1Eeqc+r5ok="'
+</Macro>
