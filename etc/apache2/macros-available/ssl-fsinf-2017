@@ -3,7 +3,6 @@
 
     SSLCertificateFile /etc/ssl/public/$hostname.pem
     SSLCertificateKeyFile /etc/ssl/private/$hostname.key
-    SSLCACertificateFile /etc/ssl/certs/fsinf_at_2017.pem
 
     # Get the correct hash with:
     #     openssl x509 -pubkey -noout -in <cert> | grep -v PUBLIC | base64 -d \

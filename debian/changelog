@@ -6,6 +6,7 @@ fsinf-server-config-apache (1:2019.07.21.1) unstable; urgency=low
   * Warn in postinst if /etc/ssl/dhparam.pem does not exist
   * Update TLS cipher list to EECDH+AESGCM:EDH+AESGCM
   * Set "SSLHonorCipherOrder On" and "SSLSessionTickets Off"
+  * ssl-fsinf-2017 macro: Remove useless SSLCACertificateFile
   * Fix changelog entry from 1:2018.03.24.1: We really disabled
     TLSv1.1, not TLSv1.2.
 
