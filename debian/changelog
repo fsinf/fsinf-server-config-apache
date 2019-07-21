@@ -1,3 +1,11 @@
+fsinf-server-config-apache (1:2019.07.21.1) unstable; urgency=low
+
+  * Update Standards-Version to 4.3.0 (no changes needed)
+  * Increase compat level to 12
+  * Remove Replaces/Breaks for old package names
+
+ -- Mathias Ertl <mati@fsinf.at>  Sun, 21 Jul 2019 10:55:23 +0200
+
 fsinf-server-config-apache (1:2018.03.24.1) unstable; urgency=low
 
   * Disable TLSv1.0 and TLSv1.2.

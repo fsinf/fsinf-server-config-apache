@@ -2,8 +2,8 @@ Source: fsinf-server-config-apache
 Section: misc
 Priority: optional
 Maintainer: Mathias Ertl <mati@fsinf.at>
-Standards-Version: 4.1.3
-Build-Depends: debhelper (>= 9)
+Standards-Version: 4.3.0
+Build-Depends: debhelper (>= 12)
 Homepage: https://github.com/fsinf/fsinf-server-config-apache
 Vcs-Browser: https://github.com/fsinf/fsinf-server-config-apache
 Vcs-Git: https://github.com/fsinf/fsinf-server-config-apache.git
@@ -11,7 +11,5 @@ Vcs-Git: https://github.com/fsinf/fsinf-server-config-apache.git
 Package: fsinf-server-config-apache
 Architecture: all
 Depends: apache2-bin, ${misc:Depends}, liblwp-useragent-determined-perl
-Replaces: fsinf-server-config-apache-macros
-Breaks: fsinf-server-config-apache-macros
 Description: Common Apache configuration
  This package provides common Apache configuration used by all our servers.
