@@ -12,6 +12,11 @@
     # probably requires Debian Buster
     #SSLOpenSSLConfCmd Curves X25519:secp521r1:secp384r1:prime256v1
 
+    # IfFile requires Debian Buster
+    #<IfFile /etc/ssl/dhparam.pem>
+    #    SSLOpenSSLConfCmd DHParameters "/etc/ssl/dhparam.pem"
+    #</IfFile>
+
     # HTTP Strict Transport Security
     Header set Strict-Transport-Security "max-age=16070400; includeSubDomains; preload"
 </Macro>
