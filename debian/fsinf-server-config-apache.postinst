@@ -41,6 +41,11 @@ case "$1" in
         rm -f /etc/apache2/conf-enabled/fsinf-server-config-apache-macros.conf
         rm -f /etc/apache2/conf-enabled/fsinf-server-config.conf
 
+        # remove old macros
+        for macro in ssl ssl-cacert ssl-hpkp-startssl-class1 ssl-hpkp-startssl-class2 ssl-hpkp-startssl-class2-iv ; do
+            rm -f /etc/apache2/macros-enabled/${macro}
+        done
+
         # reload the webserver (unconditionally, new macros might change sites)
         apache2ctl -t && invoke-rc.d apache2 reload
 
