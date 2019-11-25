@@ -7,8 +7,6 @@
         <Files awstats.pl>
             SetHandler cgi-script
             Options +ExecCGI -MultiViews -FollowSymLinks
-            Order allow,deny
-            Allow from all
             Require valid-user
 
             AuthType Basic
@@ -27,15 +25,13 @@
     <Directory /usr/share/awstats/icon>
         Options None
         AllowOverride None
-        Order allow,deny
-        Allow from all
+        Require all granted
     </Directory>
 
     # block direct web-access to awstats databases:
     <Directory /var/lib/awstats>
         Options None
         AllowOverride None
-        Order allow,deny
-        Allow from None
+        Require all denied
     </Directory>
 </Macro>
