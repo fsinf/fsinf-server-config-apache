@@ -7,7 +7,8 @@
         <Files awstats.pl>
             SetHandler cgi-script
             Options +ExecCGI -MultiViews -FollowSymLinks
-            Require valid-user
+            # If this matches, it does not check restauth-group anymore
+            #Require valid-user
 
             AuthType Basic
             AuthName "awstats statistics"
