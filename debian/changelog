@@ -1,3 +1,9 @@
+fsinf-server-config-apache (1:2020.02.25.1) unstable; urgency=high
+
+  * fix group check
+
+ -- David Kaufmann <astra@fsinf.at>  Tue, 25 Feb 2020 17:45:24 +0100
+
 fsinf-server-config-apache (1:2019.11.25.1) unstable; urgency=low
 
   * rewrite apache ACLs to apache 2.4
